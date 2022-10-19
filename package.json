@@ -2,10 +2,8 @@
   "name": "backend",
   "version": "2.0.0",
   "main": "index.js",
-  "license": "MIT",
   "engines": {
-    "node": "14.17.6",
-    "yarn": "1.22.11"
+    "node": "14.17.6"
   },
   "devDependencies": {
     "@types/bcrypt": "^5.0.0",
@@ -35,8 +33,6 @@
   "scripts": {
     "start": "node ./dist/server.js",
     "dev": "ts-node-dev --respawn --transpile-only ./src/server.ts",
-    "build": "tsc",
-    "migration:run": "ts-node-dev --transpile-only ./node_modules/typeorm/cli.js migration:run",
-    "migration:revert": "ts-node-dev --transpile-only ./node_modules/typeorm/cli.js migration:revert"
+    "dev:debug": "ts-node-dev --inspect --respawn --transpile-only src/index.ts"
   }
 }
