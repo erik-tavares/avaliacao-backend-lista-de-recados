@@ -25,9 +25,7 @@ export default class App {
     this.#express.use(cors());
   }
 
-  private middlewares() {
-    // TODO
-  }
+  private middlewares() {}
 
   private routes() {
     const router = Router();
@@ -38,7 +36,7 @@ export default class App {
     this.#express.use("/api", router);
 
     router.get("/", (_: Request, response: Response) =>
-      response.send("API rodando...")
+      response.send("API RODANDO")
     );
 
     new ProjectRoutes().init(router);
@@ -46,7 +44,7 @@ export default class App {
 
   public start(port: number) {
     this.#express.listen(port, () => {
-      console.log("API rodando...");
+      console.log("API RODANDO");
     });
   }
 }
